@@ -1,50 +1,86 @@
-# Portfolio Template 🚀
+# Developer Portfolio Template 🚀
 
-[![forthebadge](https://forthebadge.com/images/badges/open-source.svg)](https://forthebadge.com)
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Node.js](https://img.shields.io/badge/Node%20js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white) ![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&logo=npm&logoColor=white) ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E) ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) ![Sass](https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white)
 
-This portfolio template can be used to showcase your past projects, career history, and skillsets. The example project is published with [GitHub Pages](https://yujisatojr.github.io/react-portfolio-template/).
+## What is this?
 
-![Demo](https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/portfolio-demo-screenshot.png)
+This simple portfolio template is designed to showcase your past projects, career history, skill sets, and more.
+
+View the [Demo](https://yujisatojr.github.io/react-portfolio-template/).
+
+**This template is free to use, and no attribution is required.** You can fork or download this repository to customize it for your own use. Please don't forget to leave a ⭐ if you like this portfolio!
+
+![screenshot](./src/assets//images/screenshot.png)
 
 ## Features
-* Open source
-* Multi-page layout
-* Responsive design
-* Simple & modern technologies (React, JavaScript, and SCSS)
 
-This template is free to use, and no attribution is required. You can fork or download this repository to customize it for your own use. Please don't forget to leave a ⭐ if you like this portfolio!
+✅ Open source (free to use, no attribution required)  
+✅ Responsive design & mobile-friendly  
+✅ Supports both dark and light modes  
+✅ Highly customizable multi-component layout  
+✅ Built with modern technologies (React, TypeScript, JavaScript, and SCSS)  
 
-## Setup
+## Quick Setup
 
-In the project directory, you can run:
+1. Ensure you have [Node.js](https://nodejs.org/) installed. Check your installation by running:
 
-```
-npm install
-```
+    ```bash
+    node -v
+    ```
 
-Install dependencies.
+2. In the project directory, install dependencies:
 
-```
-npm start
-```
+    ```bash
+    npm install
+    ```
 
-Runs the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+3. Start the development server:
 
-The page will reload if you make edits. You will also see any lint errors in the console.
+    ```bash
+    npm start
+    ```
 
-```
-npm test
-```
+4. Open [http://localhost:3000](http://localhost:3000) to view the app in the browser.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+5. Customize the template by navigating to the `/src/components` directory. Modify texts, pictures, and other information as needed.
 
-```
-npm run deploy
-```
+The page will reload if you make edits, and you will see any lint errors in the console.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+If you are interested in creating a mockup image like the ones from the personal projects section, I recommend [Genmoo](https://gemoo.com/tools/browser-mockup-generator/). This website lets you generate sleek looking browser mockups for free.
 
-## Usage
-Once you complete the installation process indicated above, open the project folder and navigate to `/src/components` directory. Inside of it you will find all the pages and components used within the template. You can then modify texts, pictures, and other information to your own.
+## Deployment
+
+You can choose your preferred service (e.g., [Netlify](https://www.netlify.com/), [Render](https://render.com/), [Heroku](https://www.heroku.com/)) for deployment. One of the easiest ways to host this portfolio is using GitHub Pages. Follow the instructions below for a production deploy.
+
+1. **Set Up GitHub Repository**
+
+    Create a new repository on GitHub for your portfolio app.
+
+2. **Configure `package.json`**
+
+    Edit the following properties in your `package.json` file:
+
+    ```json
+    {
+        "homepage": "https://yourusername.github.io/your-repo-name",
+        "scripts": {
+            "predeploy": "npm run build",
+            "deploy": "gh-pages -d build",
+            ...
+        }
+    }
+    ```
+
+    Replace `yourusername` with your GitHub username and `your-repo-name` with the name of your GitHub repository.
+
+3. **Deploy to GitHub Pages**
+
+    Run the following command to deploy your app:
+
+    ```bash
+    npm run deploy
+    ```
+
+4. **Access Your Deployed App**
+
+    After successfully deploying, you can access your app at `https://yourusername.github.io/your-repo-name`.
