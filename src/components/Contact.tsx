@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
 // import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
@@ -8,29 +8,24 @@ import TextField from '@mui/material/TextField';
 
 function Contact() {
 
-  useEffect(() => {
-    document.title = "Yuji Sato | Contact";
-    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
-  }, []);
+  const [name, setName] = useState<string>('');
+  const [email, setEmail] = useState<string>('');
+  const [message, setMessage] = useState<string>('');
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
-
-  const [nameError, setNameError] = useState(false);
-  const [emailError, setEmailError] = useState(false);
-  const [messageError, setMessageError] = useState(false);
+  const [nameError, setNameError] = useState<boolean>(false);
+  const [emailError, setEmailError] = useState<boolean>(false);
+  const [messageError, setMessageError] = useState<boolean>(false);
 
   const form = useRef();
 
-  const sendEmail = (e) => {
+  const sendEmail = (e: any) => {
     e.preventDefault();
 
     setNameError(name === '');
     setEmailError(email === '');
     setMessageError(message === '');
 
-    // Uncomment below if you want to enable the emailJS
+    /* Uncomment below if you want to enable the emailJS */
 
     // if (name !== '' && email !== '' && message !== '') {
     //   var templateParams = {
@@ -55,14 +50,11 @@ function Contact() {
   };
 
   return (
-    <div>
-      <div className="header-image">
-        <img src="https://my-aws-assets.s3.us-west-2.amazonaws.com/portfolio-img/about-image.jpg" alt="Asset by Oziel Gómez" />
-      </div>
+    <div id="contact">
       <div className="items-container">
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
-          <p>Got a project waiting to be realized? Let's collaborate and make it happen! I am always open to new opportunities, inquiries, and hearing about new ideas.</p>
+          <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
           <Box
             ref={form}
             component="form"
@@ -102,7 +94,7 @@ function Contact() {
               label="Message"
               placeholder="Send me any inquiries or questions"
               multiline
-              rows={7}
+              rows={10}
               className="body-form"
               value={message}
               onChange={(e) => {

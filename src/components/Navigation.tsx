@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
 import Divider from '@mui/material/Divider';
 import Drawer from '@mui/material/Drawer';
 import IconButton from '@mui/material/IconButton';
+import LightModeIcon from '@mui/icons-material/LightMode';
 import List from '@mui/material/List';
+import ListIcon from '@mui/icons-material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -15,12 +17,14 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
-const navItems = [['Home', '/react-portfolio-template'], ['About', '/react-portfolio-template/about'], ['Blog', '/react-portfolio-template/blog'], ['Contact', '/react-portfolio-template/contact']];
+const navItems = [['Expertise', 'expertise'], ['History', 'history'], ['Projects', 'projects'], ['Contact', 'contact']];
 
-function Navigation() {
+function Navigation({parentToChild, modeChange}: any) {
 
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const {mode} = parentToChild;
+
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   const handleDrawerToggle = () => {
     setMobileOpen((prevState) => !prevState);
@@ -42,19 +46,28 @@ function Navigation() {
     };
   }, []);
 
+  const scrollToSection = (section: string) => {
+    console.log(section)
+    const expertiseElement = document.getElementById(section);
+    if (expertiseElement) {
+      expertiseElement.scrollIntoView({ behavior: 'smooth' });
+      console.log('Scrolling to:', expertiseElement);  // Debugging: Ensure the element is found
+    } else {
+      console.error('Element with id "expertise" not found');  // Debugging: Log error if element is not found
+    }
+  };
+
   const drawer = (
     <Box className="navigation-bar-responsive" onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-      <p>MENU</p>
+      <p className="mobile-menu-top"><ListIcon/>Menu</p>
       <Divider />
       <List>
         {navItems.map((item) => (
-          <NavLink className="nav-link" to={item[1]} key={item[0]}>
-            <ListItem key={item[0]} disablePadding>
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item[0]} />
-              </ListItemButton>
-            </ListItem>
-          </NavLink>
+          <ListItem key={item[0]} disablePadding>
+            <ListItemButton sx={{ textAlign: 'center' }} onClick={() => scrollToSection(item[1])}>
+              <ListItemText primary={item[0]} />
+            </ListItemButton>
+          </ListItem>
         ))}
       </List>
     </Box>
@@ -74,16 +87,16 @@ function Navigation() {
           >
             <MenuIcon />
           </IconButton>
-          <NavLink className="nav-bar" to="/react-portfolio-template">
-            <p>Yuji Sato</p>
-          </NavLink>
+          {mode === 'dark' ? (
+            <LightModeIcon onClick={() => modeChange()}/>
+          ) : (
+            <DarkModeIcon onClick={() => modeChange()}/>
+          )}
           <Box sx={{ display: { xs: 'none', sm: 'block' } }}>
             {navItems.map((item) => (
-              <NavLink className="nav-link" to={item[1]} key={item[0]}>
-                <Button key={item[0]} sx={{ color: '#fff' }}>
-                  {item[0]}
-                </Button>
-              </NavLink>
+              <Button key={item[0]} onClick={() => scrollToSection(item[1])} sx={{ color: '#fff' }}>
+                {item[0]}
+              </Button>
             ))}
           </Box>
         </Toolbar>
