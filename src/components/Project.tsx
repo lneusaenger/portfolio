@@ -14,57 +14,47 @@ import '../assets/styles/Project.scss';
 function Project() {
     return(
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
+        <h1>My Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
+                <img src={mock08} className="zoom" alt="thumbnail" width="100%"/>
+                <h2>iOS Reading Tracker App</h2>
+                <p>Developed an app allowing account creation, searching and shelving of books, reading goal setting, rating and reviewing of books, and displays every current NYT Bestseller. Created using <b>Google Books API, NYT API, Swift, and Figma.</b></p>
             </div>
             <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
+                <a href="https://github.com/lneusaenger/bookclub-frontend" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://github.com/lneusaenger/bookclub-backend" target="_blank" rel="noreferrer"><h2>Duke Amateurs Book Club Website</h2></a>
+                <p>Developed a website for shelving books, leaving reviews, and lending books between members of the club. Used <b>React, Node.js, Express.js, MongoDB, Google Books API, and Javascript</b>.</p>
             </div>
             <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
+                <a href="https://youtu.be/EaXCHAeUxvM" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://www.youtube.com/watch?v=S31Kqxk33hM&themeRefresh=1" target="_blank" rel="noreferrer"><h2>Heartcoded Dating Application</h2></a>
+                <p>Used <b>Javascript, RubyOnRails, PostgreSQL, React.js, and LLaMA AI</b> integration to create a dating application with profile creation, tailored matching, live chatting, and a snarky AI wingman.</p>
             </div>
             <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
+                <a href="https://www.howyoufeel.io/" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://www.howyoufeel.io/" target="_blank" rel="noreferrer"><h2>Memory Matching Minigame</h2></a>
+                <p>Pitched, prototyped, designed, architectured, developed, and tested a memory matching game using <b>Figma, XCode, GameKit, and Swift</b>. The game was featured in the HYEL social media app. </p>
             </div>
             <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
+                <img src={mock06} className="zoom" alt="thumbnail" width="100%"/>
+                <h2>Multivariate Drinking Frequency Predictive Model</h2>
+                <p>Conducted <b>visualization, ANOVA hypothesis testing, AIC variable selection, logistic regression, training, and testing</b> on the OKCupid datset consisting of over 60k records of including 31 variables. Created an ordinal predictive model that predicted users' drinking habits with up to 70% accuracy.</p>
             </div>
             <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
+                <a href="https://www.howyoufeel.io/" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://www.howyoufeel.io/" target="_blank" rel="noreferrer"><h2>Word Search Minigame</h2></a>
+                <p>Pitched, prototyped, designed, architectured, developed, and tested a word search minigame using <b>Figma, XCode, GameKit, and Swift</b>. This is featured in the HYEl social media games app.</p>
             </div>
             <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
+                <img src={mock02} className="zoom" alt="thumbnail" width="100%"/>
+                <h2>Flappy Bird</h2>
+                <p>Created Flappy Bird copycat in <b>Unity, coded in C#</b>. Allows score-keeping, replayability, and storing one's high score.</p>
             </div>
             <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
+                <img src={mock07} className="zoom" alt="thumbnail" width="100%"/>
+                <h2>Predictive Linear Regression Model for COVID-19 Cases in U.S. Prisons</h2>
+                <p>Conducted <b>data cleaning, visualization, and linear and logistic regression</b> to compare the effects of over 18 variables on the COVID-19 cases reported in 2,639 U.S. prison facilities. Created a linear model with relatively low r^2, indicating that the variables in the dataset are not sufficient predictors.</p>
             </div>
         </div>
     </div>
